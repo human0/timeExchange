@@ -5,32 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Exchange App Updated Mockups</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <div class="header"> 
+        <h1> Time Exchange App Concept</h1>
+        <h5> Financial freedom reimagined </h5>
+        <h5> Cashless community service exchange </h5>
+        <h5> In app credit monitoring </h5>
+    </div>
+
     <div class="container">
 
         <!-- Login/Signup Screen -->
         <div class="mockup">
-            <div class="header">
-                <div class="logo">TimeExchange</div>
-            </div>
-            <div class="toggle-container">
-                <div class="toggle-button active">Login</div>
-                <div class="toggle-button">Sign Up</div>
-            </div>
-            <input class="input-field" type="email" placeholder="Email">
-            <input class="input-field" type="password" placeholder="Password">
-            <div class="button">Login</div>
-            <div style="text-align: center; margin-bottom: 20px;">
-                <a href="#" style="color: #3498db; text-decoration: none;">Forgot Password?</a>
-            </div>
-            <div style="text-align: center;">
-                Or login with:
-            </div>
-            <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-                <div class="button" style="background-color: #3b5998;">Facebook</div>
-                <div class="button" style="background-color: #db4437;">Google</div>
-            </div>
+                <div class="background"></div>
+                <div class="content">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Time Exchange Logo">
+                    </div>
+                    <div class="form-container">
+                        <div class="toggle-container">
+                            <button class="toggle-button active" id="loginBtn">Login</button>
+                            <button class="toggle-button" id="signupBtn">Sign Up</button>
+                        </div>
+                        <form id="loginForm">
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" id="password" name="password" placeholder="Password" required>
+                            </div>
+                            <button type="submit" class="input-field">Login</button>
+                        </form>
+                        <form id="signupForm" style="display: none;">
+                            <div class="input-group">
+                                <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="signupEmail" name="signupEmail" placeholder="Email" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" id="signupPassword" name="signupPassword" placeholder="Password" required>
+                            </div>
+                            <button type="submit" class="input-field">Sign Up</button>
+                        </form>
+                        <div class="forgot-password">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="social-login">
+                        <a href="#" class="social-btn">f</a>
+                        <a href="#" class="social-btn">G</a>
+                    </div>
+                </div>
         </div>
 
         <!-- Verification Screen -->
@@ -93,19 +121,19 @@
             <p>Passionate software developer with a love for cooking and photography. Always eager to learn new skills and meet interesting people through time exchange!</p>
             <div class="bottom-nav">
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/homeIcon.png"> </div>
                     Home
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/profileIcon.png"> </div>
                     Profile
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Active
+                    <div> <img class="nav-icon" width="20px" src="images/exchangeIcon.png"> </div>
+                    Requests
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/messageIcon.png"> </div>
                     Messages
                 </div>
             </div>
@@ -114,20 +142,21 @@
         <!-- Updated Home/Dashboard Screen -->
         <div class="mockup">
             <div class="header">
-                <div class="logo">TimeExchange</div>
+                <div class="logo">Time Exchance</div>
             </div>
             <div class="credits">
                 Available Credits: 05:30
             </div>
-            <div class="section-title">Time Exchange Progress</div>
+            <div class="button">Request Service</div>
+            <div class="info-tip">
+                <div class="section-title">Reward Progress<i class="fas fa-info-circle info-icon"></i></div>
+                <span class="tooltiptext">18:00 hour/ 24:00 hours exchanged. 6:00 hours until next skill tag!</span>
+            </div>
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-            <div>18:00 / 24:00 hours exchanged</div>
-            <div>6:00 hours until next skill tag!</div>
-            <div class="button">Request Service</div>
-            <div class="section-title">Nearby Requests</div>
-            <div class="request-list">
+            <div class="section-title">Recommended Requests</div>
+            <div class="service-request-list">
                 <div class="request-item">
                     <div class="user-preview">
                         <div class="user-preview-avatar" style="background-image: url('https://i.pravatar.cc/150?img=1')"></div>
@@ -147,27 +176,22 @@
                     <div>5 km away • 1 hr</div>
                 </div>
             </div>
-            <div class="button">View All Requests</div>
             <div class="bottom-nav">
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/homeIcon.png"> </div>
                     Home
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/profileIcon.png"> </div>
                     Profile
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Active
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Messages
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/exchangeIcon.png"> </div>
                     Requests
+                </div>
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/messageIcon.png"> </div>
+                    Messages
                 </div>
             </div>
         </div>
@@ -219,24 +243,20 @@
             </div>
             <div class="bottom-nav">
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/homeIcon.png"> </div>
                     Home
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/profileIcon.png"> </div>
                     Profile
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Active
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Messages
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/exchangeIcon.png"> </div>
                     Requests
+                </div>
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/messageIcon.png"> </div>
+                    Messages
                 </div>
             </div>
         </div>
@@ -246,12 +266,12 @@
             <div class="header">
                 <div class="logo">Request Details</div>
             </div>
-            <div class="section-title">Gardening Help</div>
             <div class="user-preview">
                 <div class="user-preview-avatar" style="background-image: url('https://i.pravatar.cc/150?img=1')"></div>
                 <div class="user-preview-name">Emma S.</div>
                 <div class="user-preview-rating">★ 4.8</div>
             </div>
+            <div class=""><b>Gardening Help</b></div>
             <div>Need help with pruning and planting new flowers.</div>
             <div>Duration: 2 hours</div>
             <div>Start: May 15, 2024 at 10:00 AM</div>
@@ -261,33 +281,25 @@
                 <span class="tag">Gardening</span>
                 <span class="tag">Outdoor</span>
             </div>
-            <div class="section-title">Your Skills</div>
-            <div>
-                <span class="tag">Gardening</span>
-                <span class="tag">Landscaping</span>
-            </div>
-            <textarea class="input-field" placeholder="Why are you a good fit for this request? (optional)" style="height: 100px;"></textarea>
+            <div class="section-title">Motivation</div>
+            <textarea class="input-field" placeholder="Why are you a good fit for this request? (optional)" style="height: 50px;"></textarea>
             <div class="button">Apply for This Request</div>
             <div class="bottom-nav">
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/homeIcon.png"> </div>
                     Home
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/profileIcon.png"> </div>
                     Profile
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Active
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Messages
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/exchangeIcon.png"> </div>
                     Requests
+                </div>
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/messageIcon.png"> </div>
+                    Messages
                 </div>
             </div>
         </div>
@@ -364,27 +376,22 @@
                     </div>
                 </div>
             </div>
-
             <div class="bottom-nav">
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/homeIcon.png"> </div>
                     Home
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/profileIcon.png"> </div>
                     Profile
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Active
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Messages
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/exchangeIcon.png"> </div>
                     Requests
+                </div>
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/messageIcon.png"> </div>
+                    Messages
                 </div>
             </div>
         </div>
@@ -410,19 +417,19 @@
             <div class="emergency-button">Emergency Stop</div>
             <div class="bottom-nav">
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/homeIcon.png"> </div>
                     Home
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/profileIcon.png"> </div>
                     Profile
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Active
+                    <div> <img class="nav-icon" width="20px" src="images/exchangeIcon.png"> </div>
+                    Requests
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/messageIcon.png"> </div>
                     Messages
                 </div>
             </div>
@@ -456,24 +463,20 @@
             <div class="button">Submit Review</div>
             <div class="bottom-nav">
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/homeIcon.png"> </div>
                     Home
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/profileIcon.png"> </div>
                     Profile
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Active
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Messages
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/exchangeIcon.png"> </div>
                     Requests
+                </div>
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/messageIcon.png"> </div>
+                    Messages
                 </div>
             </div>
         </div>
@@ -517,64 +520,56 @@
             </div>
             <div class="bottom-nav">
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/homeIcon.png"> </div>
                     Home
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/profileIcon.png"> </div>
                     Profile
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Active
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Messages
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/exchangeIcon.png"> </div>
                     Requests
+                </div>
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/messageIcon.png"> </div>
+                    Messages
                 </div>
             </div>
         </div>
 
         <!-- Create Service Request Screen -->
         <div class="mockup">
-        <div class="header">
-            <div class="logo">Create Request</div>
-        </div>
-        <input class="input-field" type="text" placeholder="Title">
-        <textarea class="input-field" placeholder="Description" style="height: 100px;"></textarea>
-        <input class="input-field" type="text" placeholder="Tags (comma separated)">
-        <input class="input-field" type="number" placeholder="Estimated Duration (hours)">
-        <input class="input-field" type="datetime-local" placeholder="Start Date/Time">
-        <div class="section-title">Location Radius</div>
-        <input type="range" min="1" max="50" value="25" class="input-field">
-        <div>25 km</div>
-        <div class="button">Post Request</div>
-        <div class="bottom-nav">
-            <div class="nav-item">
-                <div class="nav-icon"></div>
-                Home
+            <div class="header">
+                <div class="logo">Create Request</div>
             </div>
-            <div class="nav-item">
-                <div class="nav-icon"></div>
-                Profile
-            </div>
-            <div class="nav-item">
-                <div class="nav-icon"></div>
-                Active
-            </div>
-            <div class="nav-item">
-                <div class="nav-icon"></div>
-                Messages
-            </div>
-            <div class="nav-item">
-                <div class="nav-icon"></div>
-                Requests
-            </div>
-        </div>
+            <input class="input-field" type="text" placeholder="Title">
+            <textarea class="input-field" placeholder="Description" style="height: 100px;"></textarea>
+            <input class="input-field" type="text" placeholder="Tags (comma separated)">
+            <input class="input-field" type="number" placeholder="Estimated Duration (hours)">
+            <input class="input-field" type="datetime-local" placeholder="Start Date/Time">
+            <div class="section-title">Location Radius</div>
+            <input type="range" min="1" max="50" value="25" class="input-field">
+            <div>25 km</div>
+            <div class="button">Post Request</div>
+            <div class="bottom-nav">
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/homeIcon.png"> </div>
+                    Home
+                </div>
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/profileIcon.png"> </div>
+                    Profile
+                </div>
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/exchangeIcon.png"> </div>
+                    Requests
+                </div>
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/messageIcon.png"> </div>
+                    Messages
+                </div>
+            </div>   
         </div>
 
         <!-- Service Request Detail Screen for owner -->
@@ -609,7 +604,7 @@
                         <div class="user-preview-avatar" style="background-image: url('https://i.pravatar.cc/150?img=10')"></div>
                         <div class="user-preview-name">John D.</div>
                         <div class="user-preview-rating">★ 4.7</div>
-                        <div class="button" style="margin-bottom: 0; margin-left: 10px; margin-right: 0;">Confirm</div>
+                        <div class="button" style="margin-bottom: 0; margin-left: 10px;">Confirm</div>
                     </div>
                     
                 </div>
@@ -618,30 +613,26 @@
                         <div class="user-preview-avatar" style="background-image: url('https://i.pravatar.cc/150?img=11')"></div>
                         <div class="user-preview-name">Sarah M.</div>
                         <div class="user-preview-rating">★ 4.9</div>
-                        <div class="button float-right" style="margin-bottom: 0;  margin-left: 2px; margin-right: 0;">Confirm</div>
+                        <div class="button float-right" style="margin-bottom: 0;  margin-left: 1px;">Confirm</div>
                     </div>
                 </div>
             </div>
             <div class="bottom-nav">
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/homeIcon.png"> </div>
                     Home
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/profileIcon.png"> </div>
                     Profile
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Active
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Messages
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/exchangeIcon.png"> </div>
                     Requests
+                </div>
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/messageIcon.png"> </div>
+                    Messages
                 </div>
             </div>
         </div>
@@ -678,27 +669,24 @@
             <div class="button" style="background-color: #e74c3c;">Logout</div>
             <div class="bottom-nav">
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/homeIcon.png"> </div>
                     Home
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/profileIcon.png"> </div>
                     Profile
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Active
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
-                    Messages
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon"></div>
+                    <div> <img class="nav-icon" width="20px" src="images/exchangeIcon.png"> </div>
                     Requests
+                </div>
+                <div class="nav-item">
+                    <div> <img class="nav-icon" width="20px" src="images/messageIcon.png"> </div>
+                    Messages
                 </div>
             </div>
         </div>
+
     </div>
 
 
@@ -709,6 +697,27 @@
                 const content = header.nextElementSibling;
                 content.style.display = content.style.display === 'none' ? 'block' : 'none';
             });
+        });
+    </script>
+
+    <script>
+        const loginBtn = document.getElementById('loginBtn');
+        const signupBtn = document.getElementById('signupBtn');
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+
+        loginBtn.addEventListener('click', () => {
+            loginBtn.classList.add('active');
+            signupBtn.classList.remove('active');
+            loginForm.style.display = 'block';
+            signupForm.style.display = 'none';
+        });
+
+        signupBtn.addEventListener('click', () => {
+            signupBtn.classList.add('active');
+            loginBtn.classList.remove('active');
+            signupForm.style.display = 'block';
+            loginForm.style.display = 'none';
         });
     </script>
 
